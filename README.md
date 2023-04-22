@@ -9,6 +9,6 @@
 
 # outputs.
 
-![Screenshot_1681638006](https://user-images.githubusercontent.com/103682112/233781062-82bee64e-ed3e-41f7-aa08-9a3b8de9d02f.png width =600 height =300)   ![Screenshot_1682162191](https://user-images.githubusercontent.com/103682112/233781073-e23d0d5a-fc2c-4fa0-8e97-a504575af44d.png width =600 height =300 )  
+![Screenshot_1681638006](https://user-images.githubusercontent.com/103682112/233781062-82bee64e-ed3e-41f7-aa08-9a3b8de9d02f.png | width =600 height =300)   ![Screenshot_1682162191](https://user-images.githubusercontent.com/103682112/233781073-e23d0d5a-fc2c-4fa0-8e97-a504575af44d.png | width =600 height =300 )  
 
 
