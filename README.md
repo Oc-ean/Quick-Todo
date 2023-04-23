@@ -5,7 +5,7 @@
  . Delete all completed tasks
  . Delete task according to the index
  . Light theme and dark theme
- . aninmation
+ . animation
 
 # outputs.
 
