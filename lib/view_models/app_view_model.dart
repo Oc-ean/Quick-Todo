@@ -8,7 +8,6 @@ class AppViewModel with ChangeNotifier {
   List<TaskModel> task = [];
   User user = User('Ocean423');
   TextEditingController textEditingController = TextEditingController();
-  TextEditingController editingTitle = TextEditingController();
 
   Color color1 = Colors.grey.shade100;
   Color color2 = Colors.grey.shade300;
@@ -17,7 +16,8 @@ class AppViewModel with ChangeNotifier {
   bool isCompleted = false;
 
   int get numTask => task.length;
-  int get numTaskRemaining => task.where((task) => !task.isCompleted).length;
+
+  int get numTaskRemaining => task.where((task) => task.isCompleted).length;
 
   /// Hive crud.....
 
@@ -26,7 +26,6 @@ class AppViewModel with ChangeNotifier {
     print("<===== Load notes list =====>");
     print('${task.toString()}');
     task = Boxes.getTodoList().values.toList();
-    () => numTask;
 
     for (TaskModel todo in task) {
       print('All task =====> ${todo.toJson()}');
@@ -59,7 +58,7 @@ class AppViewModel with ChangeNotifier {
       final todoBox = Boxes.getTodoList();
       todoBox.add(task);
       print('Adding task');
-      () => numTask;
+
       notifyListeners();
       Navigator.pop(context);
       textEditingController.clear();
@@ -72,7 +71,7 @@ class AppViewModel with ChangeNotifier {
     TaskModel newTask = oldTask..title = textEditingController.text;
     newTask.save();
     // print('Saving edited task =====>${newTask.toJson()}');
-    textEditingController.clear();
+    // textEditingController.clear();
     Navigator.pop(context);
     notifyListeners();
   }
@@ -86,7 +85,6 @@ class AppViewModel with ChangeNotifier {
           return TodoDeleteBox(
             onPressed: () {
               taskModel.delete();
-              () => numTask;
               Navigator.pop(context);
 
               // print('<============>${taskModel.delete()}<=============>');

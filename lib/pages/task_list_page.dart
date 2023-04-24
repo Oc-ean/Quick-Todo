@@ -34,7 +34,7 @@ class TaskListPage extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                     builder: (context) => AddTaskPage(
-                          taskModel: taskModel!,
+                          taskModel: taskModel,
                         )));
           },
           child: Container(
@@ -57,6 +57,11 @@ class TaskListPage extends StatelessWidget {
               title: Text(
                 taskText,
                 style: TextStyle(
+                  decorationColor:
+                      Theme.of(context).brightness == Brightness.light
+                          ? Colors.grey
+                          : Colors.black,
+                  decoration: value ? TextDecoration.lineThrough : null,
                   color: Theme.of(context).brightness == Brightness.light
                       ? Colors.black
                       : Colors.grey,

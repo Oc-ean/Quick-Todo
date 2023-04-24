@@ -56,8 +56,11 @@ class TaskPage extends StatelessWidget {
                     appViewModel.loadTaskList();
                     return Container(
                       margin: const EdgeInsets.only(top: 10.0),
-                      padding:
-                          const EdgeInsets.only(top: 15, left: 15, right: 15),
+                      padding: const EdgeInsets.only(
+                        top: 15,
+                        left: 15,
+                        right: 15,
+                      ),
                       decoration: BoxDecoration(
                           borderRadius: const BorderRadius.vertical(
                             top: Radius.circular(30),

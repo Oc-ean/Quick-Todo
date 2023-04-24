@@ -43,7 +43,7 @@ class AddTaskPage extends StatelessWidget {
                         ),
                         child: IconButton(
                           onPressed: () {
-                            Navigator.of(context).pop();
+                            Navigator.pop(context);
                           },
                           icon: const Icon(
                             Icons.close,
@@ -157,7 +157,7 @@ class AddTaskPage extends StatelessWidget {
                       child: ElevatedButton(
                           onPressed: () {
                             if (taskModel != null) {
-                              appViewModel.editTask(taskModel, context);
+                              appViewModel.editTask(taskModel!, context);
                             } else {
                               appViewModel.addTask(context);
                             }
