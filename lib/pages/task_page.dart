@@ -111,11 +111,7 @@ class TaskPage extends StatelessWidget {
             delay: 1.2,
             child: FloatingActionButton(
               onPressed: () {
-                Navigator.of(context).push(
-                  PageTransition(
-                      child: const AddTaskPage(),
-                      type: PageTransitionType.fade),
-                );
+                appViewModel.addingTaskUi(context);
                 HapticFeedback.heavyImpact();
                 // appViewModel.bottomSheetBuilder(
                 //     const TaskBottomSheet(), context);

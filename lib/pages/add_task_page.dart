@@ -158,6 +158,7 @@ class AddTaskPage extends StatelessWidget {
                           onPressed: () {
                             if (taskModel != null) {
                               appViewModel.editTask(taskModel!, context);
+                              appViewModel.textEditingController.clear();
                             } else {
                               appViewModel.addTask(context);
                             }

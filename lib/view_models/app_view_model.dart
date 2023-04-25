@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:todo_app/models/task_model.dart';
 import 'package:todo_app/models/user_model.dart';
 import 'package:todo_app/utils/delete_dialog.dart';
 import 'package:todo_app/utils/hive_boxes.dart';
+
+import '../pages/add_task_page.dart';
 
 class AppViewModel with ChangeNotifier {
   List<TaskModel> task = [];
@@ -58,10 +61,9 @@ class AppViewModel with ChangeNotifier {
       final todoBox = Boxes.getTodoList();
       todoBox.add(task);
       print('Adding task');
-
+      textEditingController.clear();
       notifyListeners();
       Navigator.pop(context);
-      textEditingController.clear();
     }
   }
 
@@ -150,6 +152,13 @@ class AppViewModel with ChangeNotifier {
           .toList();
     }
     taskSearched = results;
+    notifyListeners();
+  }
+
+  addingTaskUi(BuildContext context) {
+    Navigator.of(context).push(
+      PageTransition(child: const AddTaskPage(), type: PageTransitionType.fade),
+    );
     notifyListeners();
   }
 }

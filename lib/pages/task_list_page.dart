@@ -28,13 +28,13 @@ class TaskListPage extends StatelessWidget {
           onTap: () {
             AppViewModel appViewModel =
                 Provider.of<AppViewModel>(context, listen: false);
-            appViewModel.textEditingController.text = taskModel!.title;
+            appViewModel.textEditingController.text = taskModel!.title!;
             // appViewModel.editingTitle.text = taskModel!.title;
             Navigator.push(
                 context,
                 MaterialPageRoute(
                     builder: (context) => AddTaskPage(
-                          taskModel: taskModel,
+                          taskModel: taskModel!,
                         )));
           },
           child: Container(
