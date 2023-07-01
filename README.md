@@ -9,7 +9,9 @@
 
 # outputs.
 
-![Screenshot_1682379721](https://user-images.githubusercontent.com/103682112/235367247-f880e54e-b782-494b-945e-bedd87525b31.png)
+<img src="https://user-images.githubusercontent.com/103682112/235367247-f880e54e-b782-494b-945e-bedd87525b31.png)" width="300"/>
+
+
 
 
 
