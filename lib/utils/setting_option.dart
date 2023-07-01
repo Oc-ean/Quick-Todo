@@ -33,7 +33,7 @@ class SettingsOptions extends StatelessWidget {
             onPressed: () => appViewModel.bottomSheetBuilder(
                 const DeleteBottomSheetView(), context),
             child: const Text(
-              'Delete all',
+              'Delete',
               style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w400),
             ),
           ),

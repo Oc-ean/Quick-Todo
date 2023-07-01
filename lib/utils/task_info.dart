@@ -16,7 +16,7 @@ class TaskInfo extends StatelessWidget {
         return CardAnimation(
           delay: 1,
           child: Container(
-            margin: const EdgeInsets.fromLTRB(15, 10, 15, 3),
+            margin: const EdgeInsets.fromLTRB(15, 5, 15, 0),
             child: Row(
               children: [
                 Expanded(
